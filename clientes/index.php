@@ -20,13 +20,16 @@
 </head>
 <body>
     <div class="container">
-        <h1 align= "center"> CLIENTE <h1>
+        <h1 align= "center"> CLIENTES <h1>
 
         <?php if (isset($mensaje)): ?>
             <div class="<?php echo $count > 0 ? 'success' : 'error'; ?>">
                 <?php echo $mensaje; ?>
             </div>
         <?php endif; ?>
+
+        <!--<input type= "submit"class="buton" href="nuevo.php">Agregar Nuevo cliente</input>-->
+        <!--<button  type= "submit"class="buton" href="nuevo.php">Agregar Nuevo cliente </button>-->
 
         <a href="nuevo.php" class="button">Agregar Nuevo cliente</a>
 

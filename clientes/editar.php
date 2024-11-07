@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../includes/functions.php';
+require_once __DIR__ . '/../includes/funciones.php';
 $cliente = obtenerClientePorId($_GET['id']);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     actualizarCliente($_GET['id'], $_POST['nombre'], $_POST['correo'], $_POST['telefono'], $_POST['direccion']);
@@ -13,10 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <link rel="stylesheet" href="../public/css/styles.css">
     <meta charset="UTF-8">
-    <title>Nuevo Cliente</title>
+    <title>Editar Cliente</title>
 </head>
 <body>
-    <h1>Agregar Cliente</h1>
+<div class="container">
+    <h1 align= "center">EDITAR CLIENTE</h1>
     <form method="POST">
         <label>Nombre:</label><input type="text" name="nombre" value="<?php $cliente['nombre'] ?>" required><br>
         <label>Correo:</label><input type="email" name="correo" value="<?php $cliente['correo'] ?>" required><br>
@@ -25,5 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Guardar</button>
     </form>
     <a href="index.php" class="button">Volver a la lista de clientes</a>
+</div>
 </body>
 </html>
